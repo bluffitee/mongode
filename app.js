@@ -16,6 +16,10 @@ const uri = process.env.MONGODB_URI;
 // 	{ useUnifiedTopology: true }
 // );
 
+app.get("/", (req, res) => {
+	res.send("Hello world!");
+});
+
 app.get("/api", (req, res) => {
 	MongoClient.connect(
 		uri,
